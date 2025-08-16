@@ -1,0 +1,6 @@
+id,name,type,trigger,requirements,effects_json,frequencyDays,notes
+ev_disease_outbreak,Disease Outbreak,Incident,Random,"housing<comfort:low>","{\"morale\":-8,\"medsUsed\":6}",7,Impacts morale and consumes meds
+ev_theft,Theft,Incident,Random,"storage>capacity:80%","{\"resourcesLostPct\":0.05}",5,Small resource loss
+ ev_power_failure,Power Failure,Incident,Random,"power<net:0>","{\"productionDebuffPct\":-0.2,\"durationHours\":2}",6,Temporary output debuff
+ ev_horde_preview,Horde Rumblings,Forecast,Timer,"hordeInterest>70","{\"siegeInHours\":12}",3,Pre-alert for horde night
+ ev_trait_conflict,Trait Conflict,Social,Random,"survivorTraits:conflict","{\"morale\":-4,\"relationship\":-1}",4,Choice can mitigate

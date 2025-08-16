@@ -1,0 +1,5 @@
+id,name,archetype,startingRep,minRep,maxRep,tradingModifiersJson,raidChanceBase,notes
+f_traders,Traders,Merchant,10,-50,100,"{\"prices\":{\"buy\":1.0,\"sell\":0.8},\"aidAtRep\":50}",0.00,Reliable commerce; convoys and contracts
+f_raiders,Raiders,Hostile,-20,-100,20,"{\"prices\":{\"buy\":1.4,\"sell\":0.6},\"extortAtRep\":-40}",0.12,May raid low-defense settlements
+f_militia,Militia,Defender,0,-50,80,"{\"prices\":{\"buy\":1.1,\"sell\":0.9},\"aidAtRep\":30}",0.02,Offers joint expeditions
+f_cultists,Cultists,Zealot,-10,-100,40,"{\"prices\":{\"buy\":1.3,\"sell\":0.7},\"sabotageAtRep\":-50}",0.08,Story-critical antagonists

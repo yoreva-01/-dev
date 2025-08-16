@@ -1,0 +1,9 @@
+id,type,slot,name,tier,damage,armor,rangeMeters,rofPerSec,accuracyPct,staminaCost,ammoType,craft_station,craft_cost_json,notes
+wep_machete,Weapon,Primary,Machete,1,22,0,1.2,1.1,85,8,,workshop,"{\"metal\":40,\"fabric\":10}",Reliable melee
+wep_pistol,Weapon,Primary,9mm Pistol,1,16,0,20,3.5,78,4,9mm,workshop,"{\"metal\":60,\"parts\":30}",Basic sidearm
+wep_shotgun,Weapon,Primary,Shotgun,2,38,0,12,1.2,72,10,12g,workshop,"{\"metal\":120,\"parts\":60}",Close range burst
+arm_leather,Armor,Body,Leather Vest,1,0,8,,,,-,,-,workshop,"{\"fabric\":40,\"parts\":10}",Light protection
+arm_plate,Armor,Body,Plated Jacket,2,0,16,,,,,-,workshop,"{\"metal\":80,\"fabric\":40,\"parts\":20}",Heavier protection
+tool_lockpick,Tool,Utility,Lockpick Set,1,0,0,,,,-,,-,workshop,"{\"metal\":10,\"parts\":20}",Opens locked doors
+con_medkit,Consumable,Utility,Medkit,1,0,0,,,,-,,-,workshop,"{\"fabric\":20,\"chemicals\":20}",Heals injuries
+con_stim,Consumable,Utility,Adrenaline Stim,2,0,0,,,,-,,-,workshop,"{\"chemicals\":40,\"parts\":10}",Temporary speed/resolve boost

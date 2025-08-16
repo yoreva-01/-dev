@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Havenfall Balance Parameters",
+  "type": "object",
+  "properties": {
+    "buildings": {
+      "type": "object",
+      "description": "Map of buildingId to building definition",
+      "additionalProperties": { "$ref": "#/$defs/BuildingDefinition" }
+    },
+    "enemies": {
+      "type": "object",
+      "description": "Map of enemyId to enemy definition",
+      "additionalProperties": { "$ref": "#/$defs/EnemyDefinition" }
+    },
+    "hordeDirector": { "$ref": "#/$defs/HordeDirector" },
+    "lootTables": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/LootTable" }
+    },
+    "techTree": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/TechNode" }
+    }
+  },
+  "required": ["buildings", "enemies", "hordeDirector"],
+  "$defs": {
+    "Cost": {
+      "type": "object",
+      "additionalProperties": { "type": "number", "minimum": 0 }
+    },
+    "BuildingLevel": {
+      "type": "object",
+      "properties": {
+        "level": { "type": "integer", "minimum": 1 },
+        "timeSeconds": { "type": "integer", "minimum": 0 },
+        "cost": { "$ref": "#/$defs/Cost" },
+        "power": { "type": "integer", "description": "Positive = produces, negative = consumes" },
+        "workers": { "type": "integer", "minimum": 0 },
+        "stats": { "type": "object", "description": "Outputs, capacities, rates, modifiers" },
+        "sockets": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["level"]
+    },
+    "BuildingDefinition": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "footprint": { "type": "string", "description": "e.g., 2x2" },
+        "levels": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/BuildingLevel" },
+          "minItems": 1
+        },
+        "adjacency": { "type": "object", "additionalProperties": { "type": "number" } }
+      },
+      "required": ["levels"]
+    },
+    "EnemyDefinition": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "class": { "type": "string" },
+        "hp": { "type": "integer", "minimum": 1 },
+        "speedMps": { "type": "number", "minimum": 0 },
+        "armor": { "type": "integer", "minimum": 0 },
+        "damage": { "type": "integer", "minimum": 0 },
+        "abilities": { "type": "array", "items": { "type": "string" } },
+        "noiseAffinity": { "type": "number", "minimum": 0 },
+        "weakness": { "type": "string" }
+      },
+      "required": ["hp", "damage"]
+    },
+    "HordeDirector": {
+      "type": "object",
+      "properties": {
+        "noiseThreshold": { "type": "integer", "minimum": 0 },
+        "cooldownSec": { "type": "integer", "minimum": 0 },
+        "intensityBands": { "type": "array", "items": { "type": "number", "minimum": 0 } },
+        "spawnTable": { "$ref": "#/$defs/LootTable" },
+        "modifiers": { "type": "object", "description": "Weather/night modifiers, faction aggression, etc." }
+      },
+      "required": ["noiseThreshold", "cooldownSec", "intensityBands"]
+    },
+    "LootTable": {
+      "type": "object",
+      "properties": {
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "weight": { "type": "number", "minimum": 0 },
+              "min": { "type": "number", "minimum": 0 },
+              "max": { "type": "number", "minimum": 0 }
+            },
+            "required": ["id", "weight"]
+          }
+        }
+      },
+      "required": ["entries"]
+    },
+    "TechNode": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "branch": { "type": "string", "enum": ["Survival", "Engineering", "Defense", "Society"] },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "prereqIds": { "type": "array", "items": { "type": "string" } },
+        "unlockIds": { "type": "array", "items": { "type": "string" } },
+        "cost": { "$ref": "#/$defs/Cost" },
+        "timeSeconds": { "type": "integer", "minimum": 0 }
+      },
+      "required": ["branch", "name"]
+    }
+  }
+}

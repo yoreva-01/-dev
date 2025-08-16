@@ -1,0 +1,21 @@
+id,name,category,footprint,description,unlocks_at_hq,adjacency_json,notes
+building_hq,HQ,Core,3x3,Central command unlocking caps and tiers,1,{},Gates tech tree and building caps
+building_housing,Housing,Housing,2x2,Provides beds and comfort to improve morale,1,{},Quality affects recovery speed
+building_farm,Farm,Production,2x2,Produces food over time,1,"{\"building_water_tower\":0.10,\"building_greenhouse\":0.15}",Weather reduces output; greenhouse mitigates
+building_water_still,Water Still,Production,2x2,Produces water without power,1,{},Upgrade path to Purifier
+building_purifier,Water Purifier,Production,2x2,High-output water facility requiring power,2,"{\"building_water_tower\":0.10}",Replaces/augments Water Still
+building_workshop,Workshop,Utility,2x2,Craft weapons tools traps and consumables,2,{},Enables item crafting
+building_armory,Armory,Utility,2x2,Stores ammo and improves loadouts,2,{},Unlocks advanced weapon crafts
+building_med_bay,Med Bay,Utility,2x2,Treats injuries and infections,2,{},Higher quality speeds recovery
+building_generator,Generator,Power,2x2,Produces power but consumes fuel and makes noise,1,"{\"building_battery\":0.15}",Blackouts impose penalties
+building_solar,Solar Array,Power,2x2,Produces power by day with low upkeep,3,"{\"building_battery\":0.15}",Output reduced at night and during storms
+building_battery,Battery Bank,Power,2x2,Stores excess energy,3,{},Reduces blackout risk
+building_storage,Storage,Storage,2x2,Increases storage capacity caps,1,{},Overflow decays
+building_wall,Wall,Defense,1x1,Blocks enemy pathing and shapes lanes,1,{},Limited per HQ level
+building_gate,Gate,Defense,1x2,Entry point that can be reinforced,1,{},Brutes target gates
+building_turret,Ballistic Turret,Defense,2x2,Automated defense consuming ammo and power,2,"{\"building_generator\":0.05}",Requires ammo and power
+building_spike_trap,Spike Trap,Defense,1x1,Low-cost damage trap with durability,1,{},Single-use if not repaired
+building_detector_tower,Detector Tower,Utility,2x2,Reveals burrowers and early waves,3,{},Expands detection radius
+building_radio_tower,Radio Tower,Utility,2x2,Calls survivors and contacts factions,2,{},Unlocks recruit events
+building_greenhouse,Greenhouse,Production,2x2,Mitigates weather penalties for farms,2,"{\"building_farm\":0.15}",Synergy with farms
+building_water_tower,Water Tower,Utility,2x2,Improves water pressure and adjacency for farms/purifiers,3,"{\"building_farm\":0.10,\"building_purifier\":0.10}",Boost nearby buildings
