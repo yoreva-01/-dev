@@ -1,0 +1,8 @@
+id,name,class,hp,speedMps,armor,damage,abilities,noiseAffinity,weakness,notes
+enemy_walker,Walker,Basic,100,1.2,0,10,,1.0,Headshots,Baseline shambling infected
+enemy_runner,Runner,Skirmisher,75,2.6,0,8,,1.1,Stagger,Fast; punishes overextension
+enemy_brute,Brute,Elite,600,1.3,4,25,GateBreaker,0.8,Explosives,Targets gates; armor plates
+enemy_spitter,Spitter,Artillery,150,1.1,0,6,AcidPool,1.0,CloseRange,Area denial; avoid clustering
+enemy_screamer,Screamer,Special,120,2.0,0,5,CallReinforcements,1.5,Silence,Alerts waves if not killed fast
+enemy_burrower,Burrower,Infiltrator,220,1.5,1,14,Tunnel,1.0,Detection,Occasionally bypasses walls
+boss_ch1,Quarantine Abomination,Boss,2400,1.0,6,45,ScreamPulse;Slam;Summon,1.2,Fire,Chapter 1 guardian with phases

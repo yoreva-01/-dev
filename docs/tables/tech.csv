@@ -1,0 +1,8 @@
+id,branch,tier,name,description,prereq_ids,cost_wood,cost_metal,cost_electronics,cost_meds,cost_fuel,timeSeconds,unlocks_ids,notes
+tt_greenhouse,Survival,1,Greenhouse,Mitigate weather penalties for farms,,200,80,0,0,0,900,building_greenhouse,Boosts farm output in bad weather
+tt_purifier,Survival,1,Water Purifier,Unlock powered water purifier,tt_greenhouse,160,140,60,0,0,960,building_purifier,Replaces or augments water still
+ tt_battery,Engineering,1,Battery Bank,Store excess power for night/blackouts,,80,120,20,0,0,540,building_battery,Reduces blackout penalties
+ tt_solar,Engineering,1,Solar Array,Daytime power generation,,120,80,40,0,0,720,building_solar,Low upkeep power source
+ tt_detector,Defense,1,Detector Tower,Reveal burrowers and early waves,,160,120,60,0,0,540,building_detector_tower,Improves siege intel
+ tt_turret_optics,Defense,2,TURRET Optics,Improve turret range and accuracy,tt_detector,140,180,120,0,0,900,,Augment for turrets
+ tt_radio,Society,1,Radio Tower,Call survivors and contact factions,,160,80,40,0,0,480,building_radio_tower,Enables recruit and faction events

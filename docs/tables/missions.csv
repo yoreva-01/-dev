@@ -1,0 +1,6 @@
+id,type,biome,riskBand,name,durationMin,stealthable,noiseRisk,objectives,rewards_json,specials,notes
+res_apartment_yellow,Rescue,Urban,Yellow,Apartment Rescue,8,true,Medium,"Secure stairwell; Locate survivors; Extract","{\"survivors\":[1,2],\"meds\":[6,12],\"traitChance\":\"City Planner\"}",Screamer,Time pressure and closed spaces
+scav_factory_yellow,Scavenge,Industrial,Yellow,Factory Loot,10,false,High,"Breach; Loot; Hold position","{\"metal\":[40,90],\"parts\":[10,30],\"electronics\":[5,12]}",Brute,Great for metal early
+recon_clinic_green,Recon,Urban,Green,Clinic Recon,6,true,Low,"Scout entrances; Mark supplies","{\"meds\":[8,16],\"chemicals\":[6,10]}",Runner,Stealth favored
+escort_convoy_yellow,Escort,Suburb,Yellow,Trader Convoy,12,false,Medium,"Defend convoy; Clear roadblocks","{\"rep\":10,\"tradeVoucher\":1}",Spitter,Dynamic waves and lanes
+story_quarantine_escape,Story,Urban,Green,Quarantine Escape,15,false,Medium,"Breach checkpoint; Shut siren; Extract","{\"blueprint\":\"tt_greenhouse\"}",Screamer,Story beat with choice

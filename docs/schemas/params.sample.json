@@ -1,0 +1,42 @@
+{
+  "buildings": {
+    "building_farm": {
+      "id": "building_farm",
+      "name": "Farm",
+      "category": "Production",
+      "footprint": "2x2",
+      "levels": [
+        { "level": 1, "timeSeconds": 300, "cost": { "wood": 120 }, "power": 0, "workers": 2, "stats": { "foodPerHour": 12 } },
+        { "level": 2, "timeSeconds": 600, "cost": { "wood": 200, "water": 60 }, "power": 0, "workers": 2, "stats": { "foodPerHour": 18 } },
+        { "level": 3, "timeSeconds": 1200, "cost": { "wood": 320, "metal": 120 }, "power": 0, "workers": 3, "stats": { "foodPerHour": 26 } }
+      ],
+      "adjacency": { "waterTower": 0.1 }
+    },
+    "building_generator": {
+      "id": "building_generator",
+      "name": "Generator",
+      "category": "Power",
+      "footprint": "2x2",
+      "levels": [
+        { "level": 1, "timeSeconds": 240, "cost": { "metal": 160, "electronics": 40 }, "power": 30, "workers": 0, "stats": { "fuelPer5Min": 1, "noisePerMin": 2 } },
+        { "level": 2, "timeSeconds": 420, "cost": { "metal": 240, "electronics": 80 }, "power": 55, "workers": 0, "stats": { "fuelPer5Min": 2, "noisePerMin": 3 } }
+      ]
+    }
+  },
+  "enemies": {
+    "enemy_screamer": { "id": "enemy_screamer", "class": "Special", "hp": 120, "speedMps": 2.0, "armor": 0, "damage": 5, "abilities": ["CallReinforcements"], "noiseAffinity": 1.5, "weakness": "Silence" },
+    "enemy_brute": { "id": "enemy_brute", "class": "Elite", "hp": 600, "speedMps": 1.3, "armor": 4, "damage": 25, "abilities": ["GateBreaker"], "noiseAffinity": 0.8, "weakness": "Explosives" }
+  },
+  "hordeDirector": {
+    "noiseThreshold": 100,
+    "cooldownSec": 14400,
+    "intensityBands": [0.8, 1.0, 1.25, 1.5],
+    "modifiers": { "nightAggression": 1.2, "rainNoiseRadius": 0.85 }
+  },
+  "lootTables": {
+    "poi_factory": { "entries": [ { "id": "metal", "weight": 6, "min": 40, "max": 90 }, { "id": "parts", "weight": 3, "min": 10, "max": 30 }, { "id": "electronics", "weight": 1, "min": 5, "max": 12 } ] }
+  },
+  "techTree": {
+    "tt_greenhouse": { "id": "tt_greenhouse", "branch": "Survival", "name": "Greenhouse", "description": "Mitigate weather penalties for farms.", "prereqIds": [], "unlockIds": ["building_greenhouse"], "cost": { "wood": 200, "metal": 80 }, "timeSeconds": 900 }
+  }
+}

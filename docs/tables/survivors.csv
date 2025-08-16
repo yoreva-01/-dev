@@ -1,0 +1,7 @@
+id,name,archetype,strength,agility,intellect,resolve,traits,perks,description
+sv_maya,Maya,Leader,6,6,7,8,Idealist;CalmUnderFire,InspiringPresence,Optimistic leader balancing survival and values
+sv_rook,Rook,Scout,5,8,5,6,NightOwl;Cynic,SilentStep,Cynical but reliable recon specialist
+sv_elena,Elena,Medic,4,6,8,7,Hopeful;Hemophobic,FieldMedic,Compassionate medic with steady hands
+sv_briggs,Briggs,Engineer,6,5,8,6,Guarded;Tinker,ImprovisedTraps,Guarded engineer who builds clever solutions
+sv_jax,Jax,Defender,8,5,4,7,Stubborn;Steadfast,ShieldWall,Frontline defender who holds the line
+sv_hana,Hana,Farmer,5,6,6,7,GreenThumb;EarlyRiser,HarvestBoost,Resilient farmer sustaining the colony
